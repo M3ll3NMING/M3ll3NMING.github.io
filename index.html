@@ -1,1 +1,62 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis of Insular Manuscripts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Analysis of Insular Manuscripts</h1>
+            <p>Produced in Britain, 700 - 1100 CE</p>
+        </header>
+
+        <section class="manuscript-section">
+            <h2><span class="initial-cap">I</span>nquiry</h2>
+            <p><span class="initial-cap">E</span>nter a specific year or a range of years (e.g., 850 or 700-799) to analyze the percentage of known extant Insular manuscripts produced in Britain during that period that contain illustrations or illuminations.</p>
+
+            <form id="analysisForm">
+                <div class="form-group">
+                    <label for="yearInput">Year or Year Range (YYYY or YYYY-YYYY):</label>
+                    <input type="text" id="yearInput" name="yearInput" required pattern="^\d{3,4}(-\d{3,4})?$" title="Enter a year (YYYY) or a year range (YYYY-YYYY)">
+                </div>
+                <button type="submit" class="analyze-button">Analyze</button>
+            </form>
+
+            <div id="resultsArea" class="results-area hidden">
+                <h2><span class="initial-cap">F</span>indings</h2>
+                <p id="resultsText"></p>
+            </div>
+
+            <div id="errorArea" class="error-area hidden">
+                <h2><span class="initial-cap">E</span>rror</h2>
+                <p id="errorText"></p>
+            </div>
+        </section>
+
+        <section class="manuscript-section">
+            <h2><span class="initial-cap">S</span>ources for Further Study</h2>
+            <p><span class="initial-cap">T</span>his analysis is based on a pre-compiled dataset. For deeper research, consult the following key sources:</p>
+            <ul>
+                <li>Gneuss, Helmut, and Michael Lapidge. 'Anglo-Saxon Manuscripts: A Bibliographical Handlist of Manuscripts and Manuscript Fragments Written or Owned in England up to 1100.' Toronto: University of Toronto Press, 2014.</li>
+                <li>Major Library Catalogues & Digital Collections:
+                    <ul>
+                        <li>British Library: <a href="https://search.bl.uk" target="_blank">Main Catalogue</a>, <a href="https://www.bl.uk/manuscripts" target="_blank">Digitised Manuscripts</a>, <a href="https://www.bl.uk/catalogues/illuminatedmanuscripts" target="_blank">Catalogue of Illuminated Manuscripts</a></li>
+                        <li>Bodleian Libraries, University of Oxford: <a href="https://search.bodleian.ox.ac.uk/" target="_blank">Archives & Manuscripts</a>, <a href="https://digital.bodleian.ox.ac.uk" target="_blank">Digital Bodleian</a></li>
+                        <li>Cambridge University Library & College Libraries: <a href="https://cudl.lib.cam.ac.uk" target="_blank">Cambridge University Digital Library (CUDL)</a>, <a href="https://parkerweb.stanford.edu" target="_blank">Parker Library on the Web (Corpus Christi College, Cambridge)</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://digital-scriptorium.org/" target="_blank">Digital Scriptorium</a> (Union catalogue)</li>
+                <li>'Insular Manuscripts: Networks of Knowledge' Project (Check for outputs)</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

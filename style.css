@@ -1,0 +1,262 @@
+/* Basic Reset and Body Styling */
+body {
+    font-family: 'EB Garamond', serif; /* Primary text font */
+    line-height: 1.8; /* Increased line height for readability */
+    margin: 0;
+    padding: 30px; /* More padding */
+    background-color: #f0e6c8; /* Parchment-like background */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXR0IGQ9Ik0wIDBoMjAwdjIwMEgweiIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPgogICAgPGRlZnM+CiAgICAgICAgPHBhdHRlcm4gaWQ9InBhdHRlcm4iIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CiAgICAgICAgICAgIDxjaXJjbGUgY3g9IjEwIiBjeT0iMTAiIHI9IjAuNSIgZmlsbD0iI2QzY2ZiMSIvPgogICAgICAgIDwvcGF0dGVybj4KICAgIDwvZGVmcz4KPC9zdmc+'); /* Subtle texture */
+    color: #333; /* Ink-like text color */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility; /* Improve text rendering */
+}
+
+.container {
+    width: 100%;
+    max-width: 850px; /* Slightly wider container */
+    background-color: #fff; /* White background for content area */
+    padding: 50px; /* More internal padding */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    border: 5px double #a0917d; /* Thicker double border */
+    box-sizing: border-box;
+    position: relative; /* Needed for potential absolute positioning of decorative elements */
+}
+
+/* Decorative Corner Elements (Optional - requires more complex CSS/SVG) */
+/* Example:
+.container::before, .container::after {
+    content: '';
+    position: absolute;
+    width: 50px; // Adjust size
+    height: 50px; // Adjust size
+    border: 2px solid #5a4b3c;
+    // Add more complex border/background-image for decoration
+}
+.container::before { top: 10px; left: 10px; border-right: none; border-bottom: none; }
+.container::after { top: 10px; right: 10px; border-left: none; border-bottom: none; }
+// Add bottom corners as well
+*/
+
+
+header {
+    text-align: center;
+    margin-bottom: 50px; /* More space below header */
+    padding-bottom: 25px;
+    border-bottom: 2px solid #d3c6b1; /* Thicker separator line */
+}
+
+header h1 {
+    font-family: 'Cinzel Decorative', serif; /* More decorative font for main title */
+    font-size: 3em; /* Larger title */
+    margin-bottom: 0.3em;
+    color: #1a1a1a;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle text shadow */
+}
+
+header p {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.manuscript-section {
+    margin-bottom: 50px; /* More space between sections */
+    padding: 30px; /* More padding within sections */
+    border: 1px dashed #d3c6b1; /* Dashed border for sections */
+    background-color: #fffaf0; /* Slightly off-white for section background */
+    position: relative; /* For initial cap positioning */
+}
+
+.manuscript-section h2 {
+    font-family: 'Cinzel Decorative', serif; /* Decorative font for section titles */
+    font-size: 2em; /* Larger section titles */
+    margin-top: 0;
+    margin-bottom: 20px; /* More space below section title */
+    color: #1a1a1a;
+    border-bottom: 1px dotted #a0917d; /* Dotted separator with ink color */
+    padding-bottom: 8px;
+    display: flex; /* Use flexbox to align initial cap */
+    align-items: center;
+}
+
+/* Initial Capital Styling */
+.initial-cap {
+    font-family: 'Cinzel Decorative', serif; /* Use the decorative font */
+    font-size: 4em; /* Make it much larger */
+    float: left; /* Float the initial cap */
+    line-height: 0.8; /* Adjust line height to pull text up */
+    margin-right: 10px; /* Space between initial cap and text */
+    color: #c0392b; /* Red ink color */
+    font-weight: bold;
+    /* text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Optional shadow */
+    /* You might need to adjust vertical-align or padding based on the specific font */
+}
+
+.manuscript-section p {
+    text-indent: 2em; /* Indent first line of paragraphs */
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 1em; /* Space between paragraphs */
+    text-align: justify; /* Justify text like a manuscript */
+}
+
+/* Adjust initial cap within paragraphs */
+.manuscript-section p .initial-cap {
+     font-size: 3em; /* Slightly smaller initial cap in paragraphs */
+     line-height: 0.9;
+     margin-right: 8px;
+}
+
+
+/* Form Styling */
+#analysisForm {
+    margin-top: 30px; /* More space above form */
+    padding-top: 20px;
+    border-top: 1px dotted #d3c6b1; /* Separator above form */
+}
+
+.form-group {
+    margin-bottom: 20px; /* More space between form groups */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px; /* More space below label */
+    font-weight: bold;
+    color: #5a4b3c; /* Label color */
+}
+
+.form-group input[type="text"] {
+    width: calc(100% - 24px); /* Adjust for padding and border */
+    padding: 12px; /* More padding */
+    border: 1px solid #a0917d; /* Ink color border */
+    background-color: #fff; /* White background for input */
+    font-family: 'EB Garamond', serif;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+
+.analyze-button {
+    display: inline-block;
+    background-color: #5a4b3c; /* Darker ink color button */
+    color: #f0e6c8; /* Parchment color text */
+    padding: 12px 25px; /* More padding */
+    border: none;
+    border-radius: 3px; /* Slightly less rounded */
+    cursor: pointer;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.2em; /* Larger font */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+.analyze-button:hover {
+    background-color: #4a3b2c; /* Darker shade on hover */
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.analyze-button:active {
+    transform: translateY(1px); /* Press effect */
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Results and Error Areas */
+.results-area, .error-area {
+    margin-top: 30px; /* More space above results */
+    padding: 20px; /* More padding */
+    border: 1px solid #a0917d; /* Ink color border */
+    background-color: #fffaf0; /* Slightly off-white background */
+}
+
+.results-area h2, .error-area h2 {
+    margin-top: 0;
+    font-size: 1.7em;
+    font-family: 'Cinzel Decorative', serif; /* Decorative font */
+    color: #c0392b; /* Red ink color */
+    border-bottom: none; /* Remove border */
+    padding-bottom: 0;
+}
+
+.error-area {
+    border-color: #c0392b; /* Red border for errors */
+    color: #c0392b; /* Red text for errors */
+}
+
+.hidden {
+    display: none; /* Utility class to hide elements */
+}
+
+/* List Styling for Sources */
+.manuscript-section ul {
+    padding-left: 30px; /* More padding for lists */
+    margin-top: 20px;
+}
+
+.manuscript-section li {
+    margin-bottom: 10px; /* More space between list items */
+}
+
+.manuscript-section a {
+    color: #5a4b3c; /* Link color */
+    text-decoration: underline; /* Keep underline for clarity */
+}
+
+.manuscript-section a:hover {
+    color: #1a1a1a; /* Darker color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    .container {
+        padding: 30px;
+    }
+    header h1 {
+        font-size: 2.5em;
+    }
+    .manuscript-section h2 {
+        font-size: 1.8em;
+    }
+    .initial-cap {
+        font-size: 3em; /* Adjust initial cap size on smaller screens */
+    }
+     .manuscript-section p .initial-cap {
+         font-size: 2.5em;
+     }
+}
+
+@media (max-width: 480px) {
+     body {
+        padding: 10px;
+    }
+    .container {
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .manuscript-section h2 {
+        font-size: 1.5em;
+    }
+     .initial-cap {
+        font-size: 2.5em; /* Further adjust initial cap size */
+    }
+     .manuscript-section p .initial-cap {
+         font-size: 2em;
+     }
+    .form-group input[type="text"] {
+         width: calc(100% - 20px); /* Adjust for padding */
+         padding: 10px;
+    }
+    .analyze-button {
+        padding: 10px 20px;
+        font-size: 1.1em;
+    }
+}
